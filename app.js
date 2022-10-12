@@ -18,7 +18,7 @@ function isTriangle() {
   const sum = sumOfAngles(angle1,angle2,angle3)
   // console.log(sum);
   
-  if(angle1 && angle2 && angle3) { 
+  if(angle1 > 0 && angle2 > 0 && angle3 > 0) { 
     if(sum === 180 ){
       console.log("yes it's a triangle")
       result.innerText = "Yay, It's a triangle."
@@ -31,12 +31,12 @@ function isTriangle() {
 
     }
   }
-  else {
-    result.innerText = 'Enter all fields.'
+  else if(angle1 <= 0 || angle2 <=0 || angle3 <=0){
+    result.innerText = 'Angle values cannot be Empty, Negative or equal to zero.'
     // outputMessage.style.display = 'block'
     // triangleGif.style.display = 'none'
     // notTriangleGif.style.display = 'none'
-  }
+  } 
 }
 
 // function displayTriangle() {

@@ -12,7 +12,12 @@ function calculateArea() {
   const baseLength = base.value 
   const heightLength = height.value
 
-  if( baseLength < 0 || heightLength < 0 ){
+  
+
+  if(baseLength.length === 0 || heightLength.length === 0) {
+    outputElement.innerText = 'Input fields cannot be empty !!'
+  }
+  else if( baseLength <= 0 || heightLength <= 0 ){
     outputElement.innerHTML = 'Only positive lengths are accepted !!'
   } else {
 
