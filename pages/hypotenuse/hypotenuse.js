@@ -20,7 +20,7 @@ function calculateHypotenuse() {
   if(a && b) {
     if(a>0 && b>0) {
       const sumOfSquares = calculateSumOfSquares( a , b)
-      const c = Math.sqrt(sumOfSquares)
+      const c = Math.sqrt(sumOfSquares).toFixed(2);
       outputElement.innerHTML = `The Hypotenuse is <span>${c}</span>`
     }
     else {
